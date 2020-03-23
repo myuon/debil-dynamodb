@@ -8,3 +8,5 @@ edition = "2018"
 
 [dependencies]
 debil = "0.2.0"
+rusoto_dynamodb = "0.43.0"
+bytes = "0.5.4"
