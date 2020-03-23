@@ -4,6 +4,7 @@ use rusoto_dynamodb::AttributeValue;
 use std::collections::HashMap;
 use std::marker::PhantomData;
 
+#[derive(Clone)]
 pub struct DynamoType(AttributeValue);
 
 impl DynamoType {
@@ -16,7 +17,7 @@ impl DynamoType {
     }
 }
 
-// Thanks to this impl, you can do `#[sql(sql_type = "AttributeValue")]`
+// Thanks to this impl, you can do `#[sql(sql_type = "DynamoType")]`
 impl<T: Attribute> SQLValue<T> for DynamoType {
     fn column_type(_: PhantomData<T>, size: i32) -> String {
         unimplemented!()
