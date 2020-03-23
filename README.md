@@ -1,4 +1,4 @@
-# debil-dynamodb
+# debil-dynamodb  [![debil-dynamodb at crates.io](https://img.shields.io/crates/v/debil-dynamodb.svg)](https://crates.io/crates/debil-dynamodb)
 
 DynamoDB implementation for [debil](https://github.com/myuon/debil).
 
