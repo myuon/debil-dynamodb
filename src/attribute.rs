@@ -3,6 +3,7 @@ use rusoto_dynamodb::AttributeValue;
 use std::collections::HashMap;
 use std::error::Error;
 
+#[derive(Debug)]
 pub enum AttributeError {
     MissingField(String),
     InvalidFormat(Box<dyn Error>),
