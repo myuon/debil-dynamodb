@@ -57,3 +57,17 @@ pub fn into_item<T: SQLTable<ValueType = DynamoType>>(item: T) -> HashMap<String
         })
         .collect()
 }
+
+pub fn from_item<T: SQLTable<ValueType = DynamoType>>(item: HashMap<String, AttributeValue>) -> T {
+    T::map_from_sql(
+        item.into_iter()
+            .map(|(k, v)| (k, DynamoType::from_attr(v)))
+            .collect(),
+    )
+}
+
+pub fn from_items<T: SQLTable<ValueType = DynamoType>>(
+    items: Vec<HashMap<String, AttributeValue>>,
+) -> Vec<T> {
+    items.into_iter().map(|item| from_item(item)).collect()
+}
