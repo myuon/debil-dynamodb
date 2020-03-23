@@ -1,2 +1,2 @@
-mod attrs;
-pub use attrs::*;
+mod attribute;
+pub use attribute::*;
