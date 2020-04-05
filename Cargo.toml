@@ -1,6 +1,6 @@
 [package]
 name = "debil-dynamodb"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["myuon <ioi.joi.koi.loi@gmail.com>"]
 edition = "2018"
 license = "MIT"
@@ -14,6 +14,6 @@ categories = ["database"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-debil = "0.2.0"
+debil = "0.3.0"
 rusoto_dynamodb = "0.43.0"
 bytes = "0.5.4"
